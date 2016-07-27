@@ -24,7 +24,7 @@ ui.childopts: "-Xmx768m -Djava.net.preferIPv4Stack=true"
 supervisor.childopts: "-Djava.net.preferIPv4Stack=true"
 worker.childopts: "-Xmx768m -Djava.net.preferIPv4Stack=true"
 
-storm.local.dir: "/home/stormworkingdirectory"
+storm.local.dir: "/home/ec2-user/storm"
 
 ui.port: 8080
 
