@@ -14,9 +14,11 @@ echo "storm install done"
 
 cat <<EOT >> /home/ec2-user/apache-storm-1.0.1/conf/storm.yaml
 storm.zookeeper.servers:
-        - "zkserver1"
+        - "zooserver"
+        - "nimbus"
+        - "slave1"
 
-nimbus.host: "nimbus1"
+nimbus.host: "nimbus"
 nimbus.childops: "-Xmx1024m -Djava.net.preferIPv4Stack=true"
 
 ui.childopts: "-Xmx768m -Djava.net.preferIPv4Stack=true"
@@ -25,7 +27,6 @@ supervisor.childopts: "-Djava.net.preferIPv4Stack=true"
 worker.childopts: "-Xmx768m -Djava.net.preferIPv4Stack=true"
 
 storm.local.dir: "/data/storm"
-
 ui.port: 8080
 
 EOT
